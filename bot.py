@@ -18,8 +18,8 @@ bot.
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
-TOKEN='162676774:AAH7oiRemjTuV2vbfwqaABk46v_ceiLr_3c'
-
+import os
+TOKEN = os.environ['TELEGRAM_TOKEN']
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
