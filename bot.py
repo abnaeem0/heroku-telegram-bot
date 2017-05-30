@@ -19,8 +19,8 @@ bot.
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 import os
-TOKEN = os.environ['TELEGRAM_TOKEN']
-PORT = int(os.environ.get('PORT', '5000'))
+
+
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -47,6 +47,8 @@ def error(bot, update, error):
 
 def main():
     # Create the EventHandler and pass it your bot's token.
+    TOKEN = os.environ['TELEGRAM_TOKEN']
+    PORT = int(os.environ.get('PORT', '5000'))
     updater = Updater(TOKEN)
 
     # Get the dispatcher to register handlers
